@@ -18,7 +18,6 @@ step 10, give answer as newerror
 step 11, create new collumn of newerror
 step 12, create new .xye file of 2theta, scaled_Y and newerror
 
-
 """
 
 import os 
