@@ -13,12 +13,13 @@ An in-depth paragraph about your project and overview of use.
 ### Dependencies
 
 * Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* 
+* There are a range of dependancy which are quired to runs this problem, the standard anaconda 
+* disbtuation, however this if this unavaiable this problem is designed to run of python3.7 and
+* using the standard scipy distribation and pandas version x.x 
 
 ### Installing
 
-* How/where to download your program
-* Dowload this program from githib
+* Dowload this program from githib 
 * Any modifications needed to be made to files/folders
 
 ### Executing program
