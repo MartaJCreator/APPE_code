@@ -1,11 +1,9 @@
 # APPE_code
 Code relating to SDPD-SX research for peak scaling and analysis
 
-Simple overview of use/purpose.
-
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Code relating to SDPD-SX research for peak scaling and analysis
 
 ## Getting Started
 
