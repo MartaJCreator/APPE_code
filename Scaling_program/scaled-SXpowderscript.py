@@ -156,8 +156,6 @@ class Helper(object):
                 pass
             
         print(self.highest_val)
-            
-    
         pass
         
     def scale_intensity(self):
@@ -243,11 +241,12 @@ class J_Ames(object):
         
         file = file.replace(".xye", "_ScaledDATA.xye")
         
-        file_csv = file.replace(".xye", ".csv")
+        # file_csv = file.replace(".xye")
+        # file_csv = file.replace(".xye", ".csv")
         
         output_file_location = output_directory_location + "/" + file
        
-        output_file_location_csv = output_directory_location + "/" + file_csv
+        # output_file_location_csv = output_directory_location + "/" + file_csv
         
         
         print(file)
@@ -264,8 +263,8 @@ class J_Ames(object):
         if os.path.isfile(output_file_location):
             print("Caution folder contains file with same name", file)
         
-        elif os.path.isfile(output_file_location_csv):
-            print("Caution folder contains file with same name", file_csv)
+        # elif os.path.isfile(output_file_location_csv):
+            # print("Caution folder contains file with same name", file_csv)
             
         else:
             print("here", output_file_location)
@@ -274,8 +273,8 @@ class J_Ames(object):
                 fileoutput.writelines(self.weaved_values)
             
           
-            with open(output_file_location_csv, "w") as fileoutput:
-                fileoutput.writelines(self.weaved_values)
+            # with open(output_file_location_csv, "w") as fileoutput:
+                # fileoutput.writelines(self.weaved_values)
         
         
         pass
@@ -298,11 +297,6 @@ class J_Ames(object):
                                        self.scaled_int_decimal, 
                                        self.new_error_decimal))
          
-    
-
-
-
-
 
 if __name__ == "__main__":
     print ("hello world ")
@@ -312,10 +306,7 @@ if __name__ == "__main__":
     
     a_File_Editor.processlist_o_data(a_File_Fetcher.get_list_o_files())
     
-    # print(a_File_Editor.return_buckets())
 
-
-    # a_J_Ames.wallE(a_File_Editor.return_buckets())
     
     
 
