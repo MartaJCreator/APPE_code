@@ -18,6 +18,7 @@ An in-depth paragraph about your project and overview of use.
 ### Installing
 
 * How/where to download your program
+* Dowload this program from githib
 * Any modifications needed to be made to files/folders
 
 ### Executing program
@@ -39,8 +40,8 @@ command to run if program contains helper info
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+ex. Marta Ross 
+ex. [@DomPizzie] martaross@94.gmail.com
 
 ## Version History
 
