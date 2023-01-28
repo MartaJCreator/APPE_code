@@ -608,15 +608,16 @@ class CentralDataHolder (object):
 
         pass
 
+    """
     def peak_selection(self, selection_mask):
-        """
-        """
+    """
+    """
         assert type(selection_mask) == list
 
         self.selection = True
         self.selection_mask = selection_mask
 
-
+    """
 
     def output_DataHolder (self):
 
@@ -1081,7 +1082,7 @@ if __name__ == "__main__":
   
     peak_mask = [0, 1, 2, 3, 5, 13]
 
-    a_CentralDataHolder.peak_selection([0, 1, 2, 3, 5, 13])
+    # a_CentralDataHolder.peak_selection([0, 1, 2, 3, 5, 13])
 
     a_CentralDataHolder.output_DataHolder()
 
