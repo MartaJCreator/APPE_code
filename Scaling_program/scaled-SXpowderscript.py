@@ -25,10 +25,9 @@ import os
 from decimal import Decimal
 
 
-class Brooks(object):
+class File_Fetcher(object):
     """
     This is the file reader 
-    named after the librarian in shawshank redemption
     """
 
     def __init__(self, a_location):
@@ -53,36 +52,36 @@ class Brooks(object):
         return(self.list_o_files, self.location)
     
     
-class Ada(object):
+class File_Editor(object):
     """
     This is the file editor 
-    Named after Ada Lovelace
+
     """
     
     def __init__(self):
         """
-        This is to initialise and for Ada to make her own Igor
+        This is to initialise and for File_Editor to make her own Helper
 
         """
-        self.a_Igor = Igor()
+        self.a_Helper = Helper()
         self.a_J_Ames = J_Ames()
         pass
     
-    def processlist_o_data(self, data_from_Brooks):
-        print(data_from_Brooks)
-        list_o_files = data_from_Brooks[0]
-        location_of_files = data_from_Brooks[1]
+    def processlist_o_data(self, data_from_File_Fetcher):
+        print(data_from_File_Fetcher)
+        list_o_files = data_from_File_Fetcher[0]
+        location_of_files = data_from_File_Fetcher[1]
     
         for file in list_o_files:
             if ".xye" in file:
                 total_file_name = location_of_files + "/" + file
                 print(file)
                 temp_list = self.open_file(total_file_name)             
-                self.a_Igor.set_raw_data(temp_list)
-                self.a_Igor.split_data()
-                self.a_Igor.find_highest_y()
-                self.a_Igor.scale_intensity()
-                self.a_Igor.give_new_error()
+                self.a_Helper.set_raw_data(temp_list)
+                self.a_Helper.split_data()
+                self.a_Helper.find_highest_y()
+                self.a_Helper.scale_intensity()
+                self.a_Helper.give_new_error()
                 self.a_J_Ames.wallE(self.return_buckets())
                 self.a_J_Ames.final_output(file)
                 
@@ -96,8 +95,8 @@ class Ada(object):
 
 
     def return_buckets(self):
-        return (self.a_Igor.xray_wavelength, self.a_Igor.TwoTheta, 
-                self.a_Igor.scaled_int, self.a_Igor.new_error)
+        return (self.a_Helper.xray_wavelength, self.a_Helper.TwoTheta, 
+                self.a_Helper.scaled_int, self.a_Helper.new_error)
         
     def return_filename(self):
         
@@ -105,7 +104,7 @@ class Ada(object):
     
     
 
-class Igor(object):
+class Helper(object):
     """
     
     This is the raw data editor
@@ -202,7 +201,7 @@ class J_Ames(object):
 
     def wallE(self, raw_data):
         """
-        This is where the buckets are recombined from Ada
+        This is where the buckets are recombined from File_Editor
         
         Named after walle who does a good job at compiling things
 
@@ -226,7 +225,7 @@ class J_Ames(object):
             # print(self.new_error[number])
             
     
-            new_string = self.Cranmer(number)
+            new_string = self.Format_Helper(number)
            
             
             self.weaved_values.append(new_string)
@@ -281,13 +280,11 @@ class J_Ames(object):
         
         pass
     
-    def Cranmer(self, number):
+    def Format_Helper(self, number):
         
         """
         This is to make the number formatting consistent
         
-        Named after Tim Cranmer, who invented the adapted abacus, 
-        used by blind people today.
         
         """
         
@@ -309,16 +306,16 @@ class J_Ames(object):
 
 if __name__ == "__main__":
     print ("hello world ")
-    a_Brooks = Brooks("test-dataSCALE")
+    a_File_Fetcher = File_Fetcher("test-dataSCALE")
     
-    a_Ada = Ada()    
+    a_File_Editor = File_Editor()    
     
-    a_Ada.processlist_o_data(a_Brooks.get_list_o_files())
+    a_File_Editor.processlist_o_data(a_File_Fetcher.get_list_o_files())
     
-    # print(a_Ada.return_buckets())
+    # print(a_File_Editor.return_buckets())
 
 
-    # a_J_Ames.wallE(a_Ada.return_buckets())
+    # a_J_Ames.wallE(a_File_Editor.return_buckets())
     
     
 
