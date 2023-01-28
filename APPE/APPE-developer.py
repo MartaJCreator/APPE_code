@@ -318,6 +318,13 @@ class Helper(object):
 
         pass
 
+        # # self.Helper.plot_data()
+        # self.Helper.Scale_reference()
+        # self.Helper.peak_possitions_ref()
+        # self.Helper.peak_possitions_SX()
+        # # self.Helper.peak_resolution()
+        # self.Helper.find_resolution_SX()
+
 
     def plot_data (self):
 
@@ -424,6 +431,35 @@ class Helper(object):
 
         """
 
+#        peaks_y, properties = find_peaks(self.data_array_40theta[1],
+#                                         prominence=(0.1, None))
+#
+#        # peaks_y, properties = find_peaks(self.data_array_40theta[1],
+#                                         # prominence=(1, None))
+#
+#        peak_xvals_SX = []
+#
+#        peak_yvals_SX = []
+#
+#        for value in peaks_y:
+#            two_theta = self.data_array[0][value]
+#            peak_xvals_SX.append(two_theta)
+#            peak_intensity = self.data_array[1][value]
+#            peak_yvals_SX.append(peak_intensity)
+#            # print(peak_xvals)
+#            # print(peak_intensity)
+#
+#        peaklist_40_SX = np.array([peak_xvals_SX, peak_yvals_SX])
+#
+#        print(len(peak_xvals_SX), len(peak_yvals_SX))
+#
+#        plt.scatter(peak_xvals_SX, peak_yvals_SX)
+#        plt.plot(self.data_array_40theta[0], self.data_array_40theta[1])
+#        plt.show()
+
+#        self.peaklist_40_SX = peaklist_40_SX
+#        test
+
         """
         peak resolution is here here
         """
@@ -449,6 +485,45 @@ class Helper(object):
         a data array is then created of the 2theta values and resolution values
         in terms of 2theta
         """
+
+#        conversion_factor = self.data_array[0,1] - self.data_array[0,0]
+#
+#        # peaks, _ = find_peaks(self.data_array[1], prominence = (0.1, None))
+#
+#        peaks, _ = find_peaks(self.data_array[1], prominence = (0.1, None))
+#
+#
+#        results_half = peak_widths(self.data_array[1], peaks, rel_height=0.5)
+#        results_half[0]  # widths
+#
+#        results_full = peak_widths(self.data_array[1], peaks, rel_height=1)
+#        results_full[0]
+#
+#        plt.plot(self.data_array[1])
+#        plt.plot(peaks, self.data_array[1][peaks], "x")
+#        plt.hlines(*results_half[1:], color="C2")
+#        plt.hlines(*results_full[1:], color="C3")
+#        plt.show()
+
+#        resolution_in_2theta = results_half[0] * conversion_factor
+#
+#        self.resolution_SX = resolution_in_2theta
+#
+#        x_coordinate = []
+#
+#        for value in peaks:
+#
+#            two_theta = self.data_array[0][value]
+#            x_coordinate.append(two_theta)
+#
+#        # print("gary", x_coordinate, len(x_coordinate), len(self.resolution_SX))
+#
+#        resolution_SX_list = np.array([x_coordinate, self.resolution_SX])
+#
+#        self.resolution_SX_list = resolution_SX_list
+#
+#        print("MrCrabs", resolution_SX_list)
+#        pass
 
         """
         set the rest here
@@ -519,6 +594,35 @@ class Helper(object):
 
         """
 
+
+        # peaks_y, properties = find_peaks(self.data_array[1], height = 10000)
+#        peaks_y, properties = find_peaks(self.data_array_40theta[1],
+#                                         prominence=(100, None))
+#        peak_xvals = []
+#
+#        peak_yvals = []
+#
+#        for value in peaks_y:
+#            two_theta = self.data_array[0][value]
+#            peak_xvals.append(two_theta)
+#            peak_intensity = self.data_array[1][value]
+#            peak_yvals.append(peak_intensity)
+#
+#        peaklist_40 = np.array([peak_xvals, peak_yvals])
+#
+#        plt.scatter(peak_xvals, peak_yvals)
+#        plt.plot(self.data_array_40theta[0], self.data_array_40theta[1])
+#        plt.title("reference")
+#        plt.show()
+
+#        self.peaklist_40 = peaklist_40
+
+#        for element in peaklist_40:
+#            print(element)
+#            for line in element:
+#                print(line)
+
+
         """
        Here you set the resolution, (as in you change the value from 100)
        
@@ -547,6 +651,49 @@ class Helper(object):
 
         works best for the reference data (high peak intensity values)
         """
+#        conversion_factor = self.data_array[0,1] - self.data_array[0,0]
+#        print(self.data_array.shape)
+#        peaks, _ = find_peaks(self.data_array[1], prominence = (100, None))
+#
+#        print(peaks)
+#
+#        # peaks, _ = find_peaks(self.data_array[1], prominence = (500, None))
+#
+#        results_half = peak_widths(self.data_array[1], peaks, rel_height=0.5)
+#        results_half[0]  # widths
+#
+#        results_full = peak_widths(self.data_array[1], peaks, rel_height=1)
+#        results_full[0]
+#
+#        plt.plot(self.data_array[1])
+#        plt.plot(peaks, self.data_array[1][peaks], "x")
+#        plt.hlines(*results_half[1:], color="C2")
+#        plt.hlines(*results_full[1:], color="C3")
+#        plt.show()
+#
+#        resolution_in_2theta = results_half[0] * conversion_factor
+#
+#        self.resolution = resolution_in_2theta
+#
+#        FWHM_value = []
+#        x_coordinate = []
+#
+#        for value in peaks:
+#
+#            print("spongebob ", value, self.data_array[0])
+#
+#            two_theta = self.data_array[0][value]
+#            x_coordinate.append(two_theta)
+#
+#            # resolution_output = results_half[0][value]
+#            # FWHM_value.append(resolution_output)
+#
+#        resolution_list = np.array([x_coordinate, self.resolution])
+
+
+#        self.resolution_list = resolution_list
+#        self.resolution_SX = self.resolution
+#        self.resolution_SX_list = self.resolution_list
 
         """
         Here you set the resolution for the ref its the 100 value you change
@@ -559,6 +706,35 @@ class Helper(object):
 
         self.resolution_SX = self.resolution
         self.resolution_SX_list = self.resolution_list
+
+
+
+
+#        resolution_data = self.find_resolution(self.data_array, 100)
+
+#        self.resolution = resolution_data[1]
+#        self.resolution_list = resolution_data[0]
+
+#        self.resolution_SX = self.resolution
+#        self.resolution_SX_list = self.resolution_list
+
+
+
+#        self.resolution_list = self.find_resolution(self.data_array, 100)
+
+        # # print(FWHM_value)
+        # # print(x_coordinate)
+
+        # height_o_peaks = self.peaklist_40[1]
+
+        # half_height_o_peaks = (self.peaklist_40[1]) / 2
+
+        # print("hello height of peaks: ", height_o_peaks)
+
+        # # print("hi there", half_height_o_peaks)
+
+        # pass
+
 
 
     def baseline_correct(self, y_values, lam, p, niter=100):
@@ -655,6 +831,63 @@ class CentralDataHolder (object):
 
             pass
 
+    """
+    def output_DataHolder_summary_table2(self):
+
+        list_of_pds = []
+        for DataHolder in self.collection_o_datasets:
+            # DataHolder_other_ds = DataHolder.resolution_SX
+            # print("here_1", DataHolder.resolution_SX)
+            # pd_df = pd.DataFrame(data=DataHolder_other_ds, index=None,
+                                   # columns=[DataHolder.file_name])
+
+            file_name1 = DataHolder.file_name + "_peak_poss"
+            file_name2 = DataHolder.file_name + "_peak_res"
+
+            # print("here_1", DataHolder.resolution_SX_list)
+            # print("here_2", DataHolder.resolution_SX_list[0,:])
+            # print("here_3", DataHolder.resolution_SX_list[1,:])
+            # print(DataHolder.reference_list, len(DataHolder.reference_list))
+
+    """
+
+    """
+
+
+            # pd_df_pos = pd.DataFrame(data=DataHolder.reference_list[0,:],
+                                      # index=None, columns=[file_name1])
+
+            # print(DataHolder.filtered_SX_peaklist_40, "here")
+
+            if DataHolder.filtered_SX_peaklist_40 == "not set":
+                # print(DataHolder.file_name)
+                pd_df_pos = pd.DataFrame(data=DataHolder.peaklist_40[0,:],
+                                   index=None, columns=[file_name1])
+                list_of_pds.append(pd_df_pos)
+                pass
+            else:
+
+                pd_df_pos_1 = pd.DataFrame(data=DataHolder.filtered_SX_peaklist_40[0,:],
+                                           index=None, columns=[file_name1])
+
+                # pd_df_res = pd.DataFrame(data=DataHolder.resolution_SX_list[1,:],
+                                          # index=None, columns=[file_name2])
+
+                # list_of_pds.append(pd_df_pos)
+                list_of_pds.append(pd_df_pos_1)
+                # list_of_pds.append(pd_df_res)
+
+        result = pd.concat(list_of_pds, axis=1, sort=False)
+
+        result.to_excel('summary_dataset_experiment.xlsx', sheet_name='Sheet1')
+
+        result_diff = self.difference_dataframe(result)
+
+        result_diff.to_excel(
+            'summary_dataset_experiment_diff.xlsx', sheet_name='Sheet2')
+
+    """
+
 
     def resolution_dataset_output (self):
 
@@ -669,10 +902,20 @@ class CentralDataHolder (object):
             file_name1 = DataHolder.file_name + "_peak_poss"
             file_name2 = DataHolder.file_name + "_peak_res"
 
-            """
+            # print("here_1", DataHolder.resolution_SX_list)
+            # print("here_2", DataHolder.resolution_SX_list[0,:])
+            # print("here_3", DataHolder.resolution_SX_list[1,:])
+            # print(DataHolder.reference_list, len(DataHolder.reference_list))
 
             """
 
+            """
+
+
+            # pd_df_pos = pd.DataFrame(data=DataHolder.reference_list[0,:],
+                                      # index=None, columns=[file_name1])
+
+            # print(DataHolder.filtered_SX_peaklist_40, "here")
 
             if DataHolder.filtered_SX_peaklist_40 == "not set":
                 # print(DataHolder.file_name)
@@ -688,12 +931,18 @@ class CentralDataHolder (object):
                 pd_df_res = pd.DataFrame(data=DataHolder.filtered_SX_resolution_40[1,:],
                                           index=None, columns=[file_name2])
 
+                # list_of_pds.append(pd_df_pos)
+                # list_of_pds.append(pd_df_pos_1)
                 list_of_pds.append(pd_df_res)
 
         result = pd.concat(list_of_pds, axis=1, sort=False)
 
         result.to_excel('summary_dataset_experiment_resolution.xlsx', sheet_name='Sheet1')
 
+        # result_res = self.resolution_dataframe(result)
+
+        # result_diff.to_excel(
+            # 'summary_dataset_experiment_diff.xlsx', sheet_name='Sheet2')
 
         self.resolution_dataframe(result)
         
@@ -710,6 +959,8 @@ class CentralDataHolder (object):
             resolution_row_dataframe = dataframe
 
 
+#        orginal_line
+#        resolution_row_dataframe = dataframe.loc[[0, 1, 2, 3, 5, 13], :]
 
         """
         # This is where specific peaks are chosen for analysis - but this should
@@ -728,6 +979,83 @@ class CentralDataHolder (object):
 
         """
 
+    """
+        result_res_total.to_excel(
+            'summary_dataset_experiment_average_1.xlsx', sheet_name='Sheet2')
+        print(result_res_total.describe(), "result_res_total check ")
+
+
+    """
+
+    """
+    THIS FUNCTION HAS BEEN BLOCKED OUT TO SIMPLIFY OUTPUT
+
+
+    def difference_dataframe (self, dataframe):
+
+
+        list_o_column = dataframe.columns
+
+        # print(list_o_column)
+
+        temp_bucket = [dataframe[list_o_column[0]]]
+
+        temp_bucket_list_o_names = [list_o_column[0]]
+
+        # print (temp_bucket_list_o_names, "look here please")
+        for name in list_o_column[1:] :
+
+            print(name)
+            difference_df = dataframe[
+                list_o_column[0]] - dataframe[name]
+
+            difference_df = difference_df.abs()
+
+            temp_bucket_list_o_names.append( name + "_difference")
+
+
+            temp_bucket.append(difference_df)
+
+
+
+        result_diff = pd.concat(temp_bucket, axis = 1, join = 'inner')
+
+        result_diff.columns = temp_bucket_list_o_names
+
+        if self.selection == True:
+            sum_dataframe = result_diff.loc[self.selection_mask, :]
+        else:
+            sum_dataframe = result_diff
+#        Orginal_line
+#        sum_dataframe = result_diff.loc[[0, 1, 2, 3, 5, 13], :]
+
+
+        """
+        # This is where specific peaks are chosen for analysis - but this should
+        # be flexible to the user
+
+    """
+
+        average_dataframe = pd.DataFrame(sum_dataframe.mean())
+
+
+        result_diff_total = pd.concat([result_diff , average_dataframe])
+
+        """
+        # if wanting to place the averages underneath the relavent columns then
+        # replace average_dataframe with average_dataframe.T
+
+    """
+
+        result_diff_total.to_excel(
+            'summary_dataset_experiment_average.xlsx', sheet_name='Sheet2')
+        # print(sum_dataframe.describe(), "wagwan piffting ")
+
+
+        return result_diff
+
+    """
+
     def output_DataHolder_summary_table(self):
 
         list_of_pds = []
@@ -741,7 +1069,8 @@ class CentralDataHolder (object):
             file_name2 = DataHolder.file_name + "_peak_res"
 
             print("here_1", DataHolder.resolution_SX_list)
-
+            # print("here_2", DataHolder.resolution_SX_list[0,:])
+            # print("here_3", DataHolder.resolution_SX_list[1,:])
 
             pd_df_pos = pd.DataFrame(data=DataHolder.resolution_SX_list[0,:],
                                       index=None, columns=[file_name1])
@@ -879,6 +1208,11 @@ class OutputDelegate (object):
                 # print(output_array[element], element)
                 pass
 
+        # output_array = original_data + peak_coordinates + resolution_coordinates
+        # print(original_data[:10], "\n")
+        # print(peak_coordinates[:10], "\n")
+        # print(resolution_coordinates[:10], "\n")
+
         file = a_DataHolder.file_name
 
         individual_folder_o_files = file + "_processed_data"
@@ -903,6 +1237,8 @@ class OutputDelegate (object):
         if os.path.isfile(output_file_location):
             print("Caution folder contains file with same name", file)
 
+        # elif os.path.isfile(output_file_location_csv):
+            # print("Caution folder contains file with same name", file_csv)
 
         else:
             print("here", output_file_location)
@@ -910,6 +1246,8 @@ class OutputDelegate (object):
             with open(output_file_location, "w") as fileoutput:
                  fileoutput.writelines(output_array)
 
+            # with open(output_file_location_csv, "w") as fileoutput:
+                 # fileoutput.writelines()
         pass
 
 class DataHolder (object):
@@ -981,6 +1319,8 @@ class DataHolder (object):
 
         self.filtered_SX_peaklist_40 = []
 
+#        print(reference_list, len(reference_list), "look here")
+
         peak_found = False
 
         for peak in self.reference_list[0] :
@@ -1028,6 +1368,13 @@ class DataHolder (object):
         print(self.filtered_SX_resolution_40, "filtered_SX_resolution check" )
 
 
+#import argparse
+#parser = argparse.ArgumentParser()
+#parser.add_argument("echo")
+#args = parser.parse_args()
+#print(args.echo)
+
+
 if __name__ == "__main__":
 
 
@@ -1055,6 +1402,7 @@ if __name__ == "__main__":
 """
 
     print(screen_splash)
+#    intput_variables = input("please enter important information")
 
 
 
@@ -1071,6 +1419,8 @@ if __name__ == "__main__":
     a_File_Fetcher = File_Fetcher()
     a_File_Fetcher.read_files("test-data")
 
+    # a_File_Fetcher.read_files("background-removed_sep20data")
+
     a_Process_Manager = Process_Manager()
 
     a_Process_Manager.collect_files(a_File_Fetcher)
@@ -1078,16 +1428,20 @@ if __name__ == "__main__":
     a_Process_Manager.opener_o_files(a_CentralDataHolder)
 
     a_CentralDataHolder.ouput_align_peaks()
+
   
     peak_mask = [0, 1, 2, 3, 5, 13]
 
     a_CentralDataHolder.peak_selection([0, 1, 2, 3, 5, 13])
 
+
     a_CentralDataHolder.output_DataHolder()
+
+    # a_CentralDataHolder.output_DataHolder_summary_table2()
 
     a_CentralDataHolder.resolution_dataset_output()
 
-
+    # a_CentralDataHolder.output_DataHolder_summary_table()
 
 
 
