@@ -140,7 +140,7 @@ class Helper(object):
             self.TwoTheta.append(temp_value[0])
             self.Intensity.append(float(temp_value[1]))
             self.error.append(temp_value[2])
-
+            
         # print(self.TwoTheta[:3], self.Intensity[:3], self.error[:3])
             
             
