@@ -42,8 +42,7 @@ command to run if program contains helper info
 Contributors names and contact info
 
 ex. Marta Ross 
-ex. [@martaross] martaross@94.gmail.com
-
+ex. [@martaross] 
 ## Version History
 
 * 0.2
