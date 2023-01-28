@@ -5,7 +5,6 @@ Created on Tue Oct 20 12:43:27 2020
 
 @author: MartaJRoss
 
-This is a slim version of OperationDataAnalysisPart1b
 
 """
 
@@ -30,10 +29,10 @@ from scipy.signal import chirp, find_peaks, peak_widths
 import pickle
 
 
-class Format_Fetcher(object):
+class File_Fetcher(object):
 
     def __init__(self):
-        print("initialising Format_Fetcher")
+        print("initialising File_Fetcher")
 
         pass
 
@@ -90,10 +89,10 @@ class Process_Manager(object):
         self.Helper = Helper()
         pass
 
-    def collect_files(self, Format_Fetcher):
+    def collect_files(self, File_Fetcher):
 
-        self.list_o_files = Format_Fetcher.get_list_o_files()
-        self.location_o_files = Format_Fetcher.get_location_o_files()
+        self.list_o_files = File_Fetcher.get_list_o_files()
+        self.location_o_files = File_Fetcher.get_location_o_files()
         pass
 
     def opener_o_files(self, a_CentralDataHolder):
@@ -373,7 +372,7 @@ class Helper(object):
 
         return peaklist
 
-    def find_resolution(self, data_array, input_prominence = 100,
+    def find_resolution(self, data_array, input_prominence = 500,
                         title = None):
         """
         Dont change prominence value here, its choose in seperate funcations
@@ -1408,7 +1407,7 @@ if __name__ == "__main__":
 
 
     """
-    a_Format_Fetcher.read_files() is where the folder of data is given, by changing
+    a_File_Fetcher.read_files() is where the folder of data is given, by changing
     this the program will open up a different folder of datafiles
     """
 
@@ -1417,14 +1416,14 @@ if __name__ == "__main__":
 
     a_CentralDataHolder.testname = "test"
 
-    a_Format_Fetcher = Format_Fetcher()
-    a_Format_Fetcher.read_files("test-data")
+    a_File_Fetcher = File_Fetcher()
+    a_File_Fetcher.read_files("test-data")
 
-    # a_Format_Fetcher.read_files("background-removed_sep20data")
+    # a_File_Fetcher.read_files("background-removed_sep20data")
 
     a_Process_Manager = Process_Manager()
 
-    a_Process_Manager.collect_files(a_Format_Fetcher)
+    a_Process_Manager.collect_files(a_File_Fetcher)
 
     a_Process_Manager.opener_o_files(a_CentralDataHolder)
 
